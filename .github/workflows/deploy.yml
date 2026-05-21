@@ -9,9 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy to Neocities
-        uses: crowlKats/deploy-to-neocities@v1.0
-        with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          dist_dir: .
-          exclude: ".git,.github,node_modules,deploy.js,package.json,package-lock.json"
+
+      - name: Upload to Neocities
+        run: |
+          find . -type f \
+            ! -path './.git/*' \
+            ! -path './.github/*' \
+            ! -path './node_modules/*' \
+            ! -name 'package.json' \
+            ! -name 'package-lock.json' \
+            ! -name 'deploy.js' \
+          | while read file; do
+            curl -n \
+              -F "${file#./}=@${file}" \
+              "https://neocities.org/api/upload" \
+              -H "Authorization: Bearer ${{ secrets.NEOCITIES_API_TOKEN }}"
+          done
