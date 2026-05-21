@@ -10,6 +10,12 @@
   src: url(https://dl.dropbox.com/s/t8282fp2qyur29y/TROGLOP_.ttf);
 }
 
+p {
+  padding-top: 10px;
+  font-family: "aldrich";
+  font-size: 15px;
+}
+
 body {
   height: 100vh;
   overflow: hidden;
@@ -133,7 +139,7 @@ body {
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   padding: 0px 15px 15px 15px;
   gap: 8px;
   overflow-y: auto;
@@ -143,12 +149,6 @@ body {
   left: 3%;
   width: 93%;
   max-height: 83%;
-}
-
-.banner-text p {
-  font-family: "aldrich";
-  font-size: 14px;
-  margin-top: 10px;
 }
 
 .banner {
@@ -177,6 +177,11 @@ body {
   gap: 5px;
 }
 
+.sidebar-row span {
+  font-family: "aldrich";
+  font-size: 17px;
+}
+
 .sidebar-row img {
   height: 50px;
   width: auto;
@@ -185,10 +190,11 @@ body {
 .sidebar-title {
   font-size: 20px;
   position: absolute;
-  top: 3%;
+  top: 2%;
   left: 10%;
-  color: #555;
-  font-family: "aldrich";
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  color: #16537e;
 }
 
 .sidebar-text,
@@ -238,4 +244,12 @@ body {
 
 .sidebar-buttons p {
   font-size: 12px;
+}
+
+h2,
+h3 {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #16537e;
 }
