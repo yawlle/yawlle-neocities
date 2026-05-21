@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: bcomnes/deploy-to-neocities@v2
+      - name: Deploy to Neocities
+        uses: jonchun/deploy-to-neocities@v1
         with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          dist_dir: .
-          cleanup: false
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
