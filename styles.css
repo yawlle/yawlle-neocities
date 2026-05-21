@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: url("/graphics/cur_pompom.cur"), auto;
+}
+
+@font-face {
+  font-family: "troglodytepop";
+  src: url(https://dl.dropbox.com/s/t8282fp2qyur29y/TROGLOP_.ttf);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  --chk1: #96ddf5;
+  --chk2: #b0c4de;
+  --chk-size: 100px;
+  background-color: var(--chk2);
+  background-image:
+    linear-gradient(
+      45deg,
+      var(--chk1) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--chk1) 75%,
+      var(--chk1) 100%
+    ),
+    linear-gradient(
+      45deg,
+      var(--chk1) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--chk1) 75%,
+      var(--chk1) 100%
+    );
+  background-size: var(--chk-size) var(--chk-size);
+  animation: diagScroll 6s linear infinite;
+}
+
+@keyframes diagScroll {
+  from {
+    background-position:
+      0 0,
+      calc(var(--chk-size) / 2) calc(var(--chk-size) / 2);
+  }
+  to {
+    background-position:
+      var(--chk-size) var(--chk-size),
+      calc(var(--chk-size) / 2 + var(--chk-size))
+        calc(var(--chk-size) / 2 + var(--chk-size));
+  }
+}
+
+.float-gif {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
+  height: 400px;
+  width: auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 1000px;
+  margin: 3vh auto;
+  height: 94vh;
+}
+
+.div-blinkies {
+  height: 31px !important;
+  width: 100%;
+  clip-path: inset(0);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: max-content;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-track img {
+  height: 31px;
+  width: auto;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.main,
+.sidebar {
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+.gif-clancy {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #999898;
+  overflow: hidden;
+}
+
+.gif-clancy img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 15px 15px 15px;
+  gap: 8px;
+  overflow-y: auto;
+  margin-right: 17px;
+
+  top: 9%;
+  left: 3%;
+  width: 93%;
+  max-height: 83%;
+}
+
+.banner-text p {
+  font-family: "aldrich";
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.banner {
+  height: 186px;
+  width: 100%;
+}
+
+.div-main {
+  width: 100%;
+  height: 100%;
+}
+
+.construction-date {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+  align-self: center;
+  font-family: "aldrich";
+}
+
+.sidebar-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.sidebar-row img {
+  height: 50px;
+  width: auto;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  color: #555;
+  font-family: "aldrich";
+}
+
+.sidebar-text,
+.sidebar-buttons {
+  position: absolute;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px 15px 15px;
+  overflow-y: auto;
+  margin-right: 17px;
+  align-items: start;
+
+  top: 14%;
+  left: 3%;
+  width: 93%;
+  max-height: 83%;
+
+  font-family: "aldrich";
+}
+
+.sidebar-buttons {
+  align-items: center;
+  gap: 9px;
+}
+
+.sidebar-text p {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button-img {
+  width: 100px;
+  align-self: center;
+  margin-top: 10px;
+  height: auto;
+}
+
+.link-button {
+  width: 80%;
+  align-items: center;
+  display: flex;
+  font-size: 11px;
+  overflow-x: auto;
+}
+
+.sidebar-buttons p {
+  font-size: 12px;
+}

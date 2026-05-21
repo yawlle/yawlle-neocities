@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preload" href="/blog/assets/styles/normalize.css" as="style">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="typing in my best cream keyboard">
+    <title>Installation Guide</title>
+
+    <!--cache busting-->
+    
+
+    <!--opengraph cards-->
+    <meta property="og:title" content="yawlle world">
+    <meta property="og:description" content="Installation Guide">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yawlle.neocities.org//posts/example_posts/installation/">
+    <meta property="og:image" content="https://yawlle.neocities.org//social.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="yawlle world">
+    <meta name="twitter:description" content="Installation Guide">
+    <meta name="twitter:image" content="https://yawlle.neocities.org//social.png">
+
+    <!--styles-->
+    <link rel="stylesheet" href="/blog/assets/styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/blog/assets/styles/style.css" type="text/css">
+    <link rel="stylesheet" href="/blog/assets/styles/themes/strawberry.css" type="text/css">
+    <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/blog/favicon.ico">
+  </head>
+  <body>
+    <nav>
+        <ol>
+            <li><a href="/blog/">Home</a></li>
+            
+                <li><a href="/blog/info/all_posts/">All Posts</a></li>
+            
+                <li><a href="/blog/posts/example_posts/installation/">Installation Guide</a></li>
+            
+                <li><a href="/blog/info/about/">About</a></li>
+            
+        </ol>
+        <ol>
+    <li>
+        <a href="/blog/tags/updates/">#Updates</a>
+    </li>
+</ol>
+    </nav>
+    <main>
+        <header>
+            <h1>Installation Guide</h1>
+            
+            
+            <time>01/01/2025</time>
+            
+        </header>
+        <p>Here's how to get started with your new blog:</p>
+<ol>
+<li><strong>Download &amp; Unzip Strawberry Starter</strong>.
+<ul>
+<li>You can grab it from <a href="https://bagenzo.itch.io/strawberry-starter">itch.io</a> or <a href="https://github.com/kate-bagenzo/strawberry-starter">Github</a>.</li>
+<li>Unzip it wherever - you can move the folder around later without issues, so don't worry.</li>
+</ul>
+</li>
+<li><strong>Download &amp; Install Node</strong>.
+<ul>
+<li>Node is a javascript runtime that lets you create things for the web.</li>
+<li>Grab it from the <a href="https://nodejs.org/en">Node website</a>.
+<ul>
+<li>Note: If you've <em>already</em> installed Node, be sure to update to the newest version.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Open a Command Line in Strawberry Starter's folder</strong>
+<ul>
+<li>Never used one? It's a program that lets you type computer commands.
+<ul>
+<li><strong>🪟 Windows</strong>: Powershell is built-in, and what I recommend you use. If you're familiar with the &quot;Command Prompt&quot;, that'll <em>probably</em> work, but it's not recommended for a variety of reasons.</li>
+<li><strong>🍎 macOS</strong>: The program is just called Terminal. Simple!</li>
+<li><strong>🐧 Linux</strong>: You definitely have it, but it's called something different depending on what kind of Linux you're running. Search for &quot;Terminal&quot; or &quot;Shell&quot;.</li>
+</ul>
+</li>
+<li>You can probably open your chosen command line in the folder by right clicking the open folder and selecting &quot;Open a Terminal&quot;, but if not, open one of these programs and type <code>cd path/to/template/</code>, where <code>path/to/template</code> is the full path you unzipped Strawberry Starter to.</li>
+</ul>
+</li>
+<li><strong>Execute the command: <code>npm install</code></strong>
+<ul>
+<li>You'll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.</li>
+<li>
+<blockquote>
+<p><strong>🪟 On Windows</strong>: You might get a Powershell error here! If it says you don't have permission to run scripts, then copy and paste this command:</p>
+</blockquote>
+<ul>
+<li>
+<blockquote>
+<p><code>Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted</code></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>You can right click -&gt; paste this, or paste it with CTRL+SHIFT+V. Beware: command lines are finnicky and won't let you copy or paste with the usual shortcuts!</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>Then, try <code>npm install</code> again.</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>If that doesn't work, try again, but running Powershell as admin.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>You only need to run <code>npm install</code> once to setup. Now you're ready to start blogging!</p>
+<h2>Starting the development server</h2>
+<p>There's a live server you can run to preview your changes as you make them. It's super convenient!<br>
+Start the server with the command <code>npm run dev</code>. Now, open <a href="localhost:1234/"><code>localhost:1234</code></a> in your browser.<br>
+This is a preview of what your blog looks like, and it'll update automatically as you save files.</p>
+<blockquote>
+<p><strong>🪟 On Windows</strong>: You might see a firewall permission prompt. Allow the script to bypass the firewall, or it won't work.</p>
+</blockquote>
+<h2>Renaming &amp; customizing your blog</h2>
+<p>Go to the <code>src</code> folder. This is where your blog's files live.<br>
+There's a lot of stuff here, but you don't need to worry about most it! For now, let's go to <code>_data</code> and open the file named <code>config.jsonc</code>.</p>
+<h3>A brief aside about JSON</h3>
+<p>If you've never seen a <code>.json</code> or <code>.jsonc</code> file before - don't worry, it's not complicated! It's just a way to store text so that it can be easily read by programs. The format of JSON is pretty simple: a bunch of <code>keys</code> and <code>values</code>, paired like so: <code>&quot;key&quot;: &quot;value&quot;,</code>. These keys and values are contained within two {curly braces}, which you'll see at the start and end of the file.</p>
+<p>Note the quotation marks and the comma! <strong>All of the key-value pairs (except for the last) must have a comma</strong>. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!</p>
+<p><code>config.jsonc</code> contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas or curly braces:</p>
+<ul>
+<li><code>siteName</code>
+<ul>
+<li>The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).</li>
+</ul>
+</li>
+<li><code>siteDescription</code>
+<ul>
+<li>A small description of your blog. Appears on the RSS feed.</li>
+</ul>
+</li>
+<li><code>siteURL</code>
+<ul>
+<li>The public URL of your blog, e.g. (example.neocities.org) <em>Required</em> for the link preview and RSS feed to function correctly.</li>
+</ul>
+</li>
+<li><code>siteAuthor</code>
+<ul>
+<li>Your name. Appears on the footer and RSS feed.</li>
+</ul>
+</li>
+<li><code>siteLang</code>
+<ul>
+<li>A two-letter code indicating what language your blog is in. Used internally for various things.</li>
+</ul>
+</li>
+<li><code>authorLink</code>
+<ul>
+<li>A link to your personal website or social media. Appears on the footer. You can leave this blank if you prefer.</li>
+</ul>
+</li>
+<li><code>authorContact</code>
+-Your email. Appears on the footer. You can leave this blank if you prefer.</li>
+<li><code>siteStyle</code>
+<ul>
+<li>The theme used by your blog. Themes are located in <code>src/assets/styles/themes/</code>. You can use (or edit) one of the premade themes, or create your own if you know CSS.</li>
+</ul>
+</li>
+<li><code>siteSubDir</code>
+<ul>
+<li>Set this only if you want to upload your blog to a subdirectory.</li>
+<li>e.g. - set this to <code>/blog/</code> if your site will be at <code>example.org/blog/</code> instead of <code>example.org</code>.</li>
+<li>This setting will automatically change all the links on your blog to work with your new subdirectory.
+<ul>
+<li>e.g. When linking images in posts, you can just do <code>/assets/images/example.jpg</code>, instead of <code>/blog/assets/images/bowl_of_berries.jpg</code></li>
+</ul>
+</li>
+<li><strong>⚠️ Warning</strong>: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!
+<ul>
+<li>Uploading to Neocities will OVERWRITE content like your <code>index.html</code> !</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>An aside about text editors</h3>
+<p>You can use whatever text editor you want to edit! I like VS Code or Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn't be a <em>word processor</em>, like Microsoft Word or Libreoffice Writer.</p>
+<h2>Making posts</h2>
+<p>Time to write your first post! Go to <code>src/posts</code> and create a new <code>.md</code> file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you're reading now is named &quot;installation.md&quot;, so if it was uploaded to <code>example.neocities.org</code>, its URL would be &quot;<code>example.neocities.org/posts/installation</code>&quot;).<br>
+Blog posts start with a little thing called <em>front matter</em>. It looks like this:</p>
+<pre><code>---
+title: The title of the blog post goes here
+date: 2025-12-25
+tags:
+- intro
+- example
+---
+</code></pre>
+<p>The title appears as a header on the post page, and also on internal links (on the frontpage's &quot;Latest posts&quot; section and the &quot;All posts&quot; page).<br>
+The date is actually optional - if it's not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.<br>
+Tags are also optional: you can add them to a post to allow users to navigate by tag. If you have at least one custom tag, a tag view will appear in &quot;All Posts&quot;.</p>
+<p>Create a new post now - give it a title and today's date. When you save the file, you should see it appear on the dev server.</p>
+<h2>The index and navbar</h2>
+<p>There are some other pages on your site besides blog posts, though! You'll notice there's a navigation bar at the top of your blog with three links: <code>home</code>, <code>all_posts</code>, and <code>about</code>. These pages are all Markdown files, so editing them is similar to editing blog posts - they're just located in different places:</p>
+<ul>
+<li>The home page (index) is located at <code>src/index.md</code>.</li>
+<li><code>all_posts.md</code> and <code>about.md</code> are found at <code>src/info</code>.
+<ul>
+<li>Any .md file written in the <code>info</code> folder will also appear in the navbar!
+<ul>
+<li>It won't count as a &quot;blog post&quot; though, so it won't appear in &quot;Latest posts&quot;, or update the RSS Feed.</li>
+<li>If you want, you can instead add a blog post to the navbar by adding <code>tags: navbar</code> to its front matter.
+<ul>
+<li>In fact, if you've noticed, this very installation guide has such a tag!
+If the difference between .md files in <code>posts</code> and <code>info</code> is confusing to you, don't worry. The main difference is that only <code>posts</code> will appear in &quot;Latest posts&quot; or &quot;All posts&quot;, while <code>info</code>s will only appear in the navbar.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You'll also notice an <code>#updates</code> link in the navbar, which leads to a tag view of a bunch of update posts. This is a minifeed - a way to make little posts that won't clog up your &quot;All Posts&quot; or RSS Feed. Kind of like a mix between social media sites &amp; blogging! If you want, you can learn more about this at the <a href="/blog/posts/example_posts/advanced-features/">Advanced Features Guide</a>, but if it doesn't sound interesting to you, you can just delete everything in <code>_includes/navbar.html</code>.</p>
+<h2>Favicon and Preview</h2>
+<p>There are two last things you want to customize:</p>
+<ul>
+<li>The favicon, which appears in the browser tab and bookmarks.
+<ul>
+<li>Found at <code>src/favicon.ico</code></li>
+</ul>
+</li>
+<li>The link preview, which appears when you link to your blog on some sites, like social media.
+<ul>
+<li>Found at <code>src/social.png</code></li>
+</ul>
+</li>
+</ul>
+<p>Both of these are images you can edit in any graphics editor. Don't change their filenames or formats!</p>
+<h2>Building and uploading your blog</h2>
+<p>To get your blog ready for uploading somewhere, go to the command line and type <code>npm run build</code>. (If the dev server is still running, you can stop it with CTRL+C first.) A folder called <code>_site</code> will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!</p>
+<p><a href="https://neocities.org/">Neocities</a> is a cool hosting provider with a free tier! If you're going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command <code>npm run upload</code>! However, it requires a bit of setup, so follow these steps:</p>
+<ol>
+<li><strong><a href="https://neocities.org/settings#sites">Go to your Neocities account settings</a></strong></li>
+<li><strong>Click &quot;manage site settings&quot;, then &quot;API&quot;.</strong></li>
+<li><strong>Copy your API key</strong>.
+<ul>
+<li>If you haven't generated an API key, do so now by pressing the button.</li>
+<li>Keep this safe! Don't share it with anyone, or they can edit your site.</li>
+</ul>
+</li>
+<li><strong>Open the <code>.env</code> file in the base of your blog and follow its instructions.</strong>
+<ul>
+<li>Don't edit <code>.env</code> itself! It's just a template of what your <code>.env.local</code> should look like, and should be kept that way to ensure your API key stays safe.</li>
+</ul>
+</li>
+<li><strong>(Optional) Set a subdirectory</strong>
+<ul>
+<li>If you have an empty site and want your blog to live at <code>example.neocities.org</code>, then you don't need to do anything else.</li>
+<li>HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like <code>example.neocities.org/blog/</code>
+<ul>
+<li>To do this, change the <code>siteSubDir</code> in <code>config.jsonc</code> to something else, e.g. <code>/blog/</code>.</li>
+</ul>
+</li>
+<li><strong>⚠️ Warning</strong>: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE content, so if you already have, for example, an <code>index.html</code> page, <code>npm run upload</code> will replace it with Strawberry Starter's index. Setting a subdirectory avoids this, but just in case, you might want to make a backup of your site before running <code>npm run upload</code>.
+<ul>
+<li>You can easily back up your Neocities site by navigating to the <a href="https://neocities.org/dashboard">dashboard</a> and clicking &quot;Download entire site&quot;.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>If you followed the above steps correctly, you should be able to use <code>npm run upload</code>! That command also builds your site, so if you're uploading to neocities this way, you don't need to run <code>npm run build</code>.</p>
+<h2>All done!</h2>
+<p>You should now have everything you need for a successful blog!<br>
+Go forth and write an introduction post, edit the index and about pages, and upload your site!<br>
+Oh - and don't forget to delete the <code>example_posts</code> folder in <code>posts</code>!</p>
+
+        
+    </main>
+    
+    
+    
+
+    <nav id="pagination">
+        
+
+        
+        <section class="pagectrl pagenext">
+            <p>Next:</p>
+            <a href="/blog/posts/example_posts/user-ref/"><p>User Reference</p><time>02/01/2025</time></a>
+        </section>
+        
+    </nav>
+    
+
+    
+    
+    
+
+    <footer>
+        <p>
+            yawlle world is written by 
+            
+                yawlle
+            
+        </p>
+        
+            <address>Contact: <a href="mailto:isaway25@gmail.com">isaway25@gmail.com</a></address>
+        
+        <aside>
+            <p>
+                <time class="lastupdate" datetime="May 20, 2026">Last update: May 20, 2026</time>
+                <a href="/blog/feed.xml">RSS</a>
+            </p>
+            <a href="#">back to top</a>
+        </aside>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preload" href="/blog/assets/styles/normalize.css" as="style">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="typing in my best cream keyboard">
+    <title>User Reference</title>
+
+    <!--cache busting-->
+    
+
+    <!--opengraph cards-->
+    <meta property="og:title" content="yawlle world">
+    <meta property="og:description" content="User Reference">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yawlle.neocities.org//posts/example_posts/user-ref/">
+    <meta property="og:image" content="https://yawlle.neocities.org//social.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="yawlle world">
+    <meta name="twitter:description" content="User Reference">
+    <meta name="twitter:image" content="https://yawlle.neocities.org//social.png">
+
+    <!--styles-->
+    <link rel="stylesheet" href="/blog/assets/styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/blog/assets/styles/style.css" type="text/css">
+    <link rel="stylesheet" href="/blog/assets/styles/themes/strawberry.css" type="text/css">
+    <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/blog/favicon.ico">
+  </head>
+  <body>
+    <nav>
+        <ol>
+            <li><a href="/blog/">Home</a></li>
+            
+                <li><a href="/blog/info/all_posts/">All Posts</a></li>
+            
+                <li><a href="/blog/posts/example_posts/installation/">Installation Guide</a></li>
+            
+                <li><a href="/blog/info/about/">About</a></li>
+            
+        </ol>
+        <ol>
+    <li>
+        <a href="/blog/tags/updates/">#Updates</a>
+    </li>
+</ol>
+    </nav>
+    <main>
+        <header>
+            <h1>User Reference</h1>
+            
+            
+            <time>02/01/2025</time>
+            
+        </header>
+        <p>This page explains how to do various things. You can find more step-by-step instructions in the installation guide, but here information is presented more simply for quick reference.</p>
+<h2>How to use your blog</h2>
+<ul>
+<li><strong>(Optional) Run the live preview server</strong>
+<ul>
+<li>In a terminal that's navigated to the Strawberry Starter folder, type <code>npm run dev</code>.</li>
+<li>Open a browser and go to <code>localhost:1234</code>.</li>
+<li>You can now preview your changes live!</li>
+</ul>
+</li>
+<li><strong>Adding or editing a blog post</strong>
+<ul>
+<li>Navigate to <code>src/posts/</code> and make or edit a .md (markdown) file.
+<ul>
+<li>You can name .md files whatever, but keep in mind that the filename will be the URL to the post.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Building your changes</strong>
+<ul>
+<li>In the terminal, stop the development server by pressing CTRL+C</li>
+<li>Execute the command <code>npm run build</code>.</li>
+<li>Your site is now built and ready for export in the <code>_site</code> folder!
+<ul>
+<li>OR, you can upload directly to Neocities with <code>npm run upload</code>! Requires some setup - see installation guide.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Anatomy of Config.jsonc</h2>
+<ul>
+<li><code>siteName</code>
+<ul>
+<li>The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media or discord, etc).</li>
+</ul>
+</li>
+<li><code>siteDescription</code>
+<ul>
+<li>A small description of your site. Appears on the link preview and RSS feed.</li>
+</ul>
+</li>
+<li><code>siteURL</code>
+<ul>
+<li>The public URL of your blog, e.g. (example.neocities.org) Needed for the link preview and RSS feed to function correctly.</li>
+</ul>
+</li>
+<li><code>siteAuthor</code>
+<ul>
+<li>Your name. Appears on the footer.</li>
+</ul>
+</li>
+<li><code>siteLang</code>
+<ul>
+<li>A two-letter code indicating what language your blog is in. Used internally for various things.</li>
+</ul>
+</li>
+<li><code>authorLink</code>
+<ul>
+<li>A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.</li>
+</ul>
+</li>
+<li><code>authorContact</code>
+<ul>
+<li>Your email. Appears on the footer. You can leave this blank if you prefer.</li>
+</ul>
+</li>
+<li><code>siteStyle</code>
+<ul>
+<li>The theme used by your blog. Themes are in located <code>src/assets/styles/themes/</code>. You can use (or edit) one of the premade themes, or create your own if you know CSS.</li>
+</ul>
+</li>
+<li><code>siteSubDir</code>
+<ul>
+<li>Set this only if you want to upload your blog to a subdirectory.</li>
+<li>e.g. - set this to <code>/blog/</code> if your site will be at <code>example.org/blog/</code> instead of <code>example.org</code>.</li>
+<li>This setting will change all the links on your blog to work with your new subdirectory.
+<ul>
+<li>e.g. When linking images in posts, you can just do <code>/assets/images/example.jpg</code>, instead of <code>/blog/assets/images/bowl_of_berries.jpg</code></li>
+</ul>
+</li>
+<li><strong>⚠️ Warning</strong>: If you're uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!
+<ul>
+<li>Uploading to Neocities will OVERWRITE content like your <code>index.html</code> !</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Commands</h2>
+<ul>
+<li><code>npm install</code>
+<ul>
+<li>This installs dependencies that your blog needs to function.</li>
+<li>You only need to run this once, to create the <code>node_modules</code> folder.
+<ul>
+<li>If that folder is deleted (e.g. you got rid of it to back up your blog somewhere) you'll need to run this command again to build or use the dev server.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>npm run dev</code>
+<ul>
+<li>This command starts a development server at <a href="localhost:1234">localhost:1234</a>.</li>
+<li>It live updates with any changes you make, so it's good to run this while writing to see a preview of your blog.</li>
+</ul>
+</li>
+<li><code>npm run build</code>
+<ul>
+<li>This command outputs your blog's files to the <code>_site/</code> folder.</li>
+</ul>
+</li>
+<li><code>npm run upload</code>
+<ul>
+<li>This command will build your site (as if you had typed <code>npm run build</code>), and then upload your site directly to Neocities.</li>
+<li>However, it won't work out of the box. Check the <a href="/blog/posts/example_posts/installation">installation guide</a> and the <code>.env</code> file for more info.</li>
+</ul>
+</li>
+<li><code>npm run backup</code>
+<ul>
+<li>New in version 1.1.0!</li>
+<li>Backs up your site to a folder <code>_backup</code>. You can use this backup to upgrade Strawberry Starter versions - just paste the folder into the newer version.</li>
+</ul>
+</li>
+</ul>
+<h3>Detailed Folder Layout Reference</h3>
+<p>Here's an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you're curious and/or brave:</p>
+<ul>
+<li><code>_backup/</code>
+<ul>
+<li>Contains a backup of your blog.</li>
+<li>Created by running <code>npm run backup</code>.</li>
+</ul>
+</li>
+<li><code>_functions/</code>
+<ul>
+<li>Contains various scripts run by Node during the site's build and install.</li>
+</ul>
+</li>
+<li><code>_site/</code>
+<ul>
+<li>Destination folder for your finished site after running <code>npm run build</code> or <code>npm run upload</code>.</li>
+</ul>
+</li>
+<li><code>node_modules/</code>
+<ul>
+<li>Contains various Node packages and dependencies.</li>
+</ul>
+</li>
+<li><code>src/</code>
+<ul>
+<li><code>_data/</code>
+<ul>
+<li><code>config.jsonc</code>
+<ul>
+<li>Contains various variables used throughout your blog.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>_includes/</code>
+<ul>
+<li>Contains HTML files that create the layout of your blog.</li>
+<li>These files also use Liquid, a templating language.</li>
+</ul>
+</li>
+<li><code>assets/</code>
+<ul>
+<li>An assorted folder for storing things like images or scripts or styles. Anything placed in this folder will automatically be copied over to <code>_site/</code> when you run the <code>build</code> or <code>upload</code> command.</li>
+</ul>
+</li>
+<li><code>info/</code>
+<ul>
+<li>Contains pages that will appear on the navbar at the top of your blog. By default, you have two: <code>all_posts</code> and <code>about</code>.</li>
+<li>If you want to add a new navbar section to your blog, add a .md file here.</li>
+</ul>
+</li>
+<li><code>posts/</code>
+<ul>
+<li>Contains blog posts.</li>
+<li>If you want to add a new blog post, add a .md file here.</li>
+</ul>
+</li>
+<li><code>minifeeds/</code>
+<ul>
+<li>Contains additional posts that won't appear in &quot;All Posts&quot; or the RSS Feed - only the tag view.</li>
+</ul>
+</li>
+<li><code>utils/</code>
+<ul>
+<li>Contains various utilities, like the tags page.</li>
+</ul>
+</li>
+<li><code>index.md</code>
+<ul>
+<li>This is the homepage of your blog.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>social.png</code>
+<ul>
+<li>This image appears in the preview card used when linking to your blog on social media.</li>
+</ul>
+</li>
+<li><code>.env</code>
+<ul>
+<li>This is a template explaining what a proper <code>.env.local</code> file should look like.</li>
+</ul>
+</li>
+<li><code>.env.local</code>
+<ul>
+<li>This file isn't created by default (for security reasons).</li>
+<li>Putting your Neocities API key here is necessary for <code>npm run upload</code> to work.</li>
+</ul>
+</li>
+<li><code>.gitignore</code>
+<ul>
+<li>Files ignored by git. If you know how to use git, then this is useful to you. If not, don't worry about it.</li>
+</ul>
+</li>
+<li><code>eleventy.config.js</code>
+<ul>
+<li>Config file for 11ty.</li>
+</ul>
+</li>
+<li><code>package.json</code>
+<ul>
+<li>Config file for Node.</li>
+</ul>
+</li>
+<li><code>README.md</code>
+<ul>
+<li>A very simple explanation of how to use your blog.</li>
+</ul>
+<ul>
+<li>This also contains a changelog detailing bug fixes/changes.
+<ul>
+<li>You can see what version you're on by checking <code>package.json</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Since you looked, if you're <strong>really</strong> curious... why not go to <a href="https://www.11ty.dev/">the 11ty homepage</a> and learn even more about how it works? This template is pretty basic and only scratches the surface. A warning, though - if you want to do something really complicated, you're probably better off starting from scratch!</p>
+<h2>Node</h2>
+<p>Strawberry Starter was made with Node version # <code>20.18.1</code>. Running on lower versions may cause bugs.<br>
+You can see your Node version by typing <code>node -v</code> into a command line.</p>
+
+        
+    </main>
+    
+    
+    
+
+    <nav id="pagination">
+        
+        <section class="pagectrl pageprev">
+            <p>Previous:</p>
+            <a href="/blog/posts/example_posts/installation/"><p>Installation Guide</p><time>01/01/2025</time></a>
+        </section>
+        
+
+        
+        <section class="pagectrl pagenext">
+            <p>Next:</p>
+            <a href="/blog/posts/example_posts/markdown-example/"><p>Markdown Examples</p><time>03/01/2025</time></a>
+        </section>
+        
+    </nav>
+    
+
+    
+    
+    
+
+    <footer>
+        <p>
+            yawlle world is written by 
+            
+                yawlle
+            
+        </p>
+        
+            <address>Contact: <a href="mailto:isaway25@gmail.com">isaway25@gmail.com</a></address>
+        
+        <aside>
+            <p>
+                <time class="lastupdate" datetime="May 20, 2026">Last update: May 20, 2026</time>
+                <a href="/blog/feed.xml">RSS</a>
+            </p>
+            <a href="#">back to top</a>
+        </aside>
+    </footer>
+</body>
+</html>

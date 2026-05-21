@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="assets/styles/rss.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>yawlle world</title>
+  <subtitle>typing in my best cream keyboard</subtitle>
+  <link href="https://yawlle.neocities.org/blog/feed.xml" rel="self" />
+  <link href="https://yawlle.neocities.org/blog/" />
+  <updated>2025-04-28T00:00:00Z</updated>
+  <id>https://yawlle.neocities.org/blog/</id>
+  <author>
+    <name>yawlle</name>
+    <email>isaway25@gmail.com</email>
+  </author>
+  <entry>
+    <title>Advanced Features</title>
+    <link href="https://yawlle.neocities.org/blog/posts/example_posts/advanced-features/" />
+    <updated>2025-04-28T00:00:00Z</updated>
+    <id>https://yawlle.neocities.org/blog/posts/example_posts/advanced-features/</id>
+    <content type="html">&lt;p&gt;This guide goes over some advanced features that aren&#39;t necessary to use. It assumes you&#39;ve read the &lt;a href=&quot;https://yawlle.neocities.org/blog/posts/example_posts/installation/&quot;&gt;Installation Guide&lt;/a&gt; first. It also assumes your version of Strawberry Starter is 1.1.0 or higher (check &lt;code&gt;package.json&lt;/code&gt; to see your version).&lt;/p&gt;
+&lt;h2&gt;Navbar Links &amp;amp; Editing&lt;/h2&gt;
+&lt;p&gt;You already know you can tag a post &lt;code&gt;navbar&lt;/code&gt; to add it to the navbar. What if you want to add links to other sites, or even images?&lt;br&gt;
+No worries - go to &lt;code&gt;_includes/navbar.html&lt;/code&gt; and you can add new HTML in there easily, without having to mess with the whole layout. Some examples are provided in comments, as well as a minifeed example.&lt;/p&gt;
+&lt;h2&gt;Minifeeds&lt;/h2&gt;
+&lt;p&gt;These are sort of a mix between blogging and social media posts. You&#39;ll find a folder called &lt;code&gt;minifeeds&lt;/code&gt; in &lt;code&gt;src&lt;/code&gt;. You can organize your feeds any way you like - the only thing that joins them together is that every post has the same tag. By default, feed posts do not appear in &lt;code&gt;All Posts&lt;/code&gt; or clog up the RSS Feed; they only appear in the &lt;code&gt;All Posts&lt;/code&gt; tag view. You can directly link to them though - they&#39;ll appear at &lt;code&gt;sitename/tags/feedname/&lt;/code&gt;. I would link to them in your index or navbar! An example minifeed - updates - is already included with Strawberry Starter. Look over it for a better understanding of what to do.&lt;/p&gt;
+&lt;h2&gt;Comments&lt;/h2&gt;
+&lt;p&gt;You&#39;ll need an external comment service like &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt; or &lt;a href=&quot;https://commentbox.io/&quot;&gt;CommentBox&lt;/a&gt;. Copy and paste the script they give you into &lt;code&gt;_includes/comments.html&lt;/code&gt;. Comments only appear on posts.&lt;/p&gt;
+&lt;h2&gt;Backing up your blog&lt;/h2&gt;
+&lt;p&gt;Type &lt;code&gt;npm run backup&lt;/code&gt; in your command line. You&#39;ll see a new &lt;code&gt;_backup&lt;/code&gt; folder appear. This folder has the bare minimum essentials in it, to save on storage space. If you want to make use of it, you&#39;ll need to download Strawberry Starter again and paste the &lt;code&gt;_backup&lt;/code&gt; folder into it.&lt;br&gt;
+This is also a convenient way to upgrade versions!&lt;/p&gt;
+&lt;p&gt;A full list of what is backed up:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your config file in &lt;code&gt;src/_data/config.jsonc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Your navbar links in &lt;code&gt;src/_includes/navbar.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Your comment script in &lt;code&gt;src/_includes/comments.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Everything in &lt;code&gt;src/assets/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Everything in &lt;code&gt;src/info/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Everything in &lt;code&gt;src/posts/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Everything in &lt;code&gt;src/minifeeds/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Your &lt;code&gt;favicon.ico&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Your &lt;code&gt;index.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Your &lt;code&gt;social.png&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This notably does NOT backup your &lt;code&gt;.env.local&lt;/code&gt;, for security reasons. You&#39;ll have to manually add that again.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>FAQ &amp; Troubleshooting</title>
+    <link href="https://yawlle.neocities.org/blog/posts/example_posts/faq/" />
+    <updated>2025-01-04T00:00:00Z</updated>
+    <id>https://yawlle.neocities.org/blog/posts/example_posts/faq/</id>
+    <content type="html">&lt;p&gt;Some answers for miscellaneous issues or concerns:&lt;/p&gt;
+&lt;h2&gt;The dev server is acting strangely / not showing updates!&lt;/h2&gt;
+&lt;p&gt;Are you on Windows? The 11ty dev server isn&#39;t perfect - things can look weird sometimes. Regardless of operating system - if you notice anything odd, my advice is to stop the dev server, and then start it again. If that doesn&#39;t fix anything, try manually deleting &lt;code&gt;_site&lt;/code&gt;, rerunning &lt;code&gt;npm run dev&lt;/code&gt;, and doing a hard refresh of the page with CTRL+SHIFT+R.&lt;/p&gt;
+&lt;h2&gt;How can I change the date format?&lt;/h2&gt;
+&lt;p&gt;Go into &lt;code&gt;eleventy.config.js&lt;/code&gt; and you&#39;ll find two filters, &lt;code&gt;lastUpdate&lt;/code&gt; and &lt;code&gt;dateFormat&lt;/code&gt;. The former controls the last modified indicator at the bottom of your blog, and the latter controls the date that appears next to posts. If you&#39;re familiar with JavaScript, you can edit the return value yourself, but if not, there are some presets you can switch to. For example - if you wanted the post dates to appear in month/day/year format, just change &lt;code&gt;return DMY;&lt;/code&gt; to &lt;code&gt;return MDY;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;This is cool, but I want to tinker with it...&lt;/h2&gt;
+&lt;p&gt;I recommend a few starting places:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn_web_development&quot;&gt;MDN Learning&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;In addition to being a great reference for HTML, CSS and JS, the Mozilla Developer Network also has a bunch of tutorials, if you&#39;re not familiar with them. They range in experience level from &amp;quot;how to open a code editor&amp;quot; to &amp;quot;how to make your own videogame&amp;quot;.&lt;/li&gt;
+&lt;li&gt;In my opinion, the best resource for learning web development online.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.11ty.dev/docs/tutorials/&quot;&gt;11ty Tutorials&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;The videos here do a great job explaining the basics of 11ty: making files with tags and iterating over collections.&lt;/li&gt;
+&lt;li&gt;They mostly scratch the surface, but it&#39;s good to start here and then search what you want to do. 11ty is very basic out of the box, but you can extend it a lot, usually by editing &lt;code&gt;eleventy.config.js&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;How can I back up my blog, or add comments?&lt;/h2&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://yawlle.neocities.org/blog/posts/example_posts/advanced-features/&quot;&gt;Advanced features guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;I have a question not answered here.&lt;/h2&gt;
+&lt;p&gt;Try making a comment on the itch page, opening an issue or pull request on the Github (if you know how to do that) or, alternatively, feel free to reach out to me on social media or email. Or if you just want to show me a cool blog you made 😊&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Markdown Examples</title>
+    <link href="https://yawlle.neocities.org/blog/posts/example_posts/markdown-example/" />
+    <updated>2025-01-03T00:00:00Z</updated>
+    <id>https://yawlle.neocities.org/blog/posts/example_posts/markdown-example/</id>
+    <content type="html">&lt;p&gt;This post is a showcase of how to write Markdown, featuring various examples of the elements you can create. Open this post in a text editor so you can see exactly how they&#39;ve been added.&lt;/p&gt;
+&lt;p&gt;Additionally, I also recommend reading &lt;a href=&quot;https://www.markdownguide.org/&quot;&gt;a Markdown guide like this one&lt;/a&gt;, or at least having it handy, so you can consult it when necessary.&lt;/p&gt;
+&lt;h1&gt;Headings (this is level 1)&lt;/h1&gt;
+&lt;h2&gt;Heading level 2&lt;/h2&gt;
+&lt;h3&gt;Heading level 3&lt;/h3&gt;
+&lt;h4&gt;Heading level 4&lt;/h4&gt;
+&lt;h5&gt;Heading level 5&lt;/h5&gt;
+&lt;h6&gt;Heading level 6&lt;/h6&gt;
+&lt;h2&gt;Paragraphs&lt;/h2&gt;
+&lt;p&gt;Strawberries are sweet and yummy, but so are some other things:&lt;br&gt;
+Halvah oat cake fruitcake dessert chocolate cake. Croissant cake marshmallow bonbon shortbread candy canes dragée chocolate caramels. Toffee toffee wafer croissant chocolate cake sugar plum liquorice apple pie. Cupcake lemon drops sweet pie cake brownie. Tart brownie biscuit danish sweet roll. Sugar plum cake donut toffee caramels bear claw jujubes. Cake halvah toffee bear claw jelly beans. Toffee jelly beans gingerbread brownie sesame snaps chocolate cake brownie danish biscuit. Sweet cupcake sweet roll powder muffin.&lt;br&gt;
+Fruitcake dessert marshmallow cake oat cake caramels jelly. Cake marshmallow carrot cake fruitcake muffin gingerbread tootsie roll sugar plum. Bonbon pudding wafer powder halvah lollipop dessert. Jelly-o chocolate bar cake topping cotton candy cotton candy halvah powder.&lt;/p&gt;
+&lt;p&gt;If you want line breaks&lt;br&gt;
+Just add two spaces&lt;br&gt;
+At the end of your sentence&lt;/p&gt;
+&lt;h2&gt;Strong Text and Emphasis&lt;/h2&gt;
+&lt;p&gt;You can use &lt;strong&gt;double asterisks&lt;/strong&gt; for strong text, and &lt;em&gt;single asterisks&lt;/em&gt; for emphasis.&lt;br&gt;
+Those will usually show up as bold and italics, but themes/custom styling can override that!
+&lt;em&gt;&lt;strong&gt;You can also use triple asterisks for both of them&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2&gt;Blockquotes&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a blockquote!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;Blockquotes are quite neat&lt;/h3&gt;
+&lt;p&gt;You can do many things with them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As you can see, you can put other elements inside them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;They &lt;em&gt;&lt;strong&gt;sure&lt;/strong&gt;&lt;/em&gt; are a lot of &lt;strong&gt;fun&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Lists&lt;/h2&gt;
+&lt;p&gt;Names for &amp;quot;Strawberry&amp;quot; in a few languages:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;quot;morango&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;fresa&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;fraise&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;jagoda&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;This is also a list&lt;/li&gt;
+&lt;li&gt;However
+&lt;ul&gt;
+&lt;li&gt;It&#39;s unordered&lt;/li&gt;
+&lt;li&gt;I think it&#39;s still cool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Don&#39;t you agree?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;You can also use an asterisk.
+&lt;ul&gt;
+&lt;li&gt;If you prefer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;You can even mix the two!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Code Blocks&lt;/h2&gt;
+&lt;p&gt;If you need to &lt;code&gt;code&lt;/code&gt;, you can use &lt;code&gt;backticks&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# you can also create fenced code blocks
+# for multiline stuff
+if (strawberry) {
+    console.log(&#39;yum!&#39;);
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;p&gt;To create a link, like, for example, &lt;a href=&quot;https://bagenzos.house&quot;&gt;one to my site&lt;/a&gt;, just use square brackets for the text, and round brackets for the URL.&lt;/p&gt;
+&lt;h2&gt;Images&lt;/h2&gt;
+&lt;p&gt;Images are fundamental to any blog, right?&lt;br&gt;
+It&#39;s similar to the link syntax, except the square brackets are for alt text, and the round brackets are for the file path. Also, don&#39;t forget the exclamation mark!
+&lt;img src=&quot;https://yawlle.neocities.org/blog/assets/images/bowl_of_berries.jpg&quot; alt=&quot;A delicious bowl of strawberries&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;HTML&lt;/h2&gt;
+&lt;p&gt;Finally, when Markdown just doesn&#39;t cut it, you CAN write HTML, if you really want to. &lt;em&gt;Any valid HTML is also valid Markdown.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You probably don&#39;t &lt;em&gt;want&lt;/em&gt; to write HTML! But it does mean you can paste things in your posts like, for example, Youtube embeds!&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube-nocookie.com/embed/WEv5ZqkaS54?si=mcG95jGYfg2U0tdW&amp;amp;controls=0&amp;amp;start=12&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;That&#39;s it for this post! There&#39;s more you can do, but I think this covers most use cases. Be sure to read a full Markdown guide!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>User Reference</title>
+    <link href="https://yawlle.neocities.org/blog/posts/example_posts/user-ref/" />
+    <updated>2025-01-02T00:00:00Z</updated>
+    <id>https://yawlle.neocities.org/blog/posts/example_posts/user-ref/</id>
+    <content type="html">&lt;p&gt;This page explains how to do various things. You can find more step-by-step instructions in the installation guide, but here information is presented more simply for quick reference.&lt;/p&gt;
+&lt;h2&gt;How to use your blog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(Optional) Run the live preview server&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;In a terminal that&#39;s navigated to the Strawberry Starter folder, type &lt;code&gt;npm run dev&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Open a browser and go to &lt;code&gt;localhost:1234&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You can now preview your changes live!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adding or editing a blog post&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to &lt;code&gt;src/posts/&lt;/code&gt; and make or edit a .md (markdown) file.
+&lt;ul&gt;
+&lt;li&gt;You can name .md files whatever, but keep in mind that the filename will be the URL to the post.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Building your changes&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;In the terminal, stop the development server by pressing CTRL+C&lt;/li&gt;
+&lt;li&gt;Execute the command &lt;code&gt;npm run build&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Your site is now built and ready for export in the &lt;code&gt;_site&lt;/code&gt; folder!
+&lt;ul&gt;
+&lt;li&gt;OR, you can upload directly to Neocities with &lt;code&gt;npm run upload&lt;/code&gt;! Requires some setup - see installation guide.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Anatomy of Config.jsonc&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;siteName&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media or discord, etc).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteDescription&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A small description of your site. Appears on the link preview and RSS feed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteURL&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;The public URL of your blog, e.g. (example.neocities.org) Needed for the link preview and RSS feed to function correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteAuthor&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Your name. Appears on the footer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteLang&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A two-letter code indicating what language your blog is in. Used internally for various things.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;authorLink&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A link to your personal website or social media or etc. Appears on the footer. You can leave this blank if you prefer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;authorContact&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Your email. Appears on the footer. You can leave this blank if you prefer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteStyle&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;The theme used by your blog. Themes are in located &lt;code&gt;src/assets/styles/themes/&lt;/code&gt;. You can use (or edit) one of the premade themes, or create your own if you know CSS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteSubDir&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set this only if you want to upload your blog to a subdirectory.&lt;/li&gt;
+&lt;li&gt;e.g. - set this to &lt;code&gt;/blog/&lt;/code&gt; if your site will be at &lt;code&gt;example.org/blog/&lt;/code&gt; instead of &lt;code&gt;example.org&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;This setting will change all the links on your blog to work with your new subdirectory.
+&lt;ul&gt;
+&lt;li&gt;e.g. When linking images in posts, you can just do &lt;code&gt;/assets/images/example.jpg&lt;/code&gt;, instead of &lt;code&gt;/blog/assets/images/bowl_of_berries.jpg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;⚠️ Warning&lt;/strong&gt;: If you&#39;re uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!
+&lt;ul&gt;
+&lt;li&gt;Uploading to Neocities will OVERWRITE content like your &lt;code&gt;index.html&lt;/code&gt; !&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Commands&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This installs dependencies that your blog needs to function.&lt;/li&gt;
+&lt;li&gt;You only need to run this once, to create the &lt;code&gt;node_modules&lt;/code&gt; folder.
+&lt;ul&gt;
+&lt;li&gt;If that folder is deleted (e.g. you got rid of it to back up your blog somewhere) you&#39;ll need to run this command again to build or use the dev server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm run dev&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This command starts a development server at &lt;a href=&quot;localhost:1234&quot;&gt;localhost:1234&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;It live updates with any changes you make, so it&#39;s good to run this while writing to see a preview of your blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm run build&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This command outputs your blog&#39;s files to the &lt;code&gt;_site/&lt;/code&gt; folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm run upload&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This command will build your site (as if you had typed &lt;code&gt;npm run build&lt;/code&gt;), and then upload your site directly to Neocities.&lt;/li&gt;
+&lt;li&gt;However, it won&#39;t work out of the box. Check the &lt;a href=&quot;https://yawlle.neocities.org/blog/posts/example_posts/installation&quot;&gt;installation guide&lt;/a&gt; and the &lt;code&gt;.env&lt;/code&gt; file for more info.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm run backup&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;New in version 1.1.0!&lt;/li&gt;
+&lt;li&gt;Backs up your site to a folder &lt;code&gt;_backup&lt;/code&gt;. You can use this backup to upgrade Strawberry Starter versions - just paste the folder into the newer version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Detailed Folder Layout Reference&lt;/h3&gt;
+&lt;p&gt;Here&#39;s an overview of the folders and files in Strawberry Starter. You can ignore most of these and have a perfectly functional blog, but if you&#39;re curious and/or brave:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_backup/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains a backup of your blog.&lt;/li&gt;
+&lt;li&gt;Created by running &lt;code&gt;npm run backup&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_functions/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains various scripts run by Node during the site&#39;s build and install.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_site/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Destination folder for your finished site after running &lt;code&gt;npm run build&lt;/code&gt; or &lt;code&gt;npm run upload&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node_modules/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains various Node packages and dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;_data/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;config.jsonc&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains various variables used throughout your blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_includes/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains HTML files that create the layout of your blog.&lt;/li&gt;
+&lt;li&gt;These files also use Liquid, a templating language.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assets/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;An assorted folder for storing things like images or scripts or styles. Anything placed in this folder will automatically be copied over to &lt;code&gt;_site/&lt;/code&gt; when you run the &lt;code&gt;build&lt;/code&gt; or &lt;code&gt;upload&lt;/code&gt; command.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;info/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains pages that will appear on the navbar at the top of your blog. By default, you have two: &lt;code&gt;all_posts&lt;/code&gt; and &lt;code&gt;about&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If you want to add a new navbar section to your blog, add a .md file here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;posts/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains blog posts.&lt;/li&gt;
+&lt;li&gt;If you want to add a new blog post, add a .md file here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;minifeeds/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains additional posts that won&#39;t appear in &amp;quot;All Posts&amp;quot; or the RSS Feed - only the tag view.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;utils/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Contains various utilities, like the tags page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index.md&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the homepage of your blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;social.png&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This image appears in the preview card used when linking to your blog on social media.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.env&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This is a template explaining what a proper &lt;code&gt;.env.local&lt;/code&gt; file should look like.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.env.local&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;This file isn&#39;t created by default (for security reasons).&lt;/li&gt;
+&lt;li&gt;Putting your Neocities API key here is necessary for &lt;code&gt;npm run upload&lt;/code&gt; to work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.gitignore&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Files ignored by git. If you know how to use git, then this is useful to you. If not, don&#39;t worry about it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eleventy.config.js&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Config file for 11ty.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Config file for Node.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;README.md&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A very simple explanation of how to use your blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;This also contains a changelog detailing bug fixes/changes.
+&lt;ul&gt;
+&lt;li&gt;You can see what version you&#39;re on by checking &lt;code&gt;package.json&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since you looked, if you&#39;re &lt;strong&gt;really&lt;/strong&gt; curious... why not go to &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;the 11ty homepage&lt;/a&gt; and learn even more about how it works? This template is pretty basic and only scratches the surface. A warning, though - if you want to do something really complicated, you&#39;re probably better off starting from scratch!&lt;/p&gt;
+&lt;h2&gt;Node&lt;/h2&gt;
+&lt;p&gt;Strawberry Starter was made with Node version # &lt;code&gt;20.18.1&lt;/code&gt;. Running on lower versions may cause bugs.&lt;br&gt;
+You can see your Node version by typing &lt;code&gt;node -v&lt;/code&gt; into a command line.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Installation Guide</title>
+    <link href="https://yawlle.neocities.org/blog/posts/example_posts/installation/" />
+    <updated>2025-01-01T00:00:00Z</updated>
+    <id>https://yawlle.neocities.org/blog/posts/example_posts/installation/</id>
+    <content type="html">&lt;p&gt;Here&#39;s how to get started with your new blog:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Download &amp;amp; Unzip Strawberry Starter&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;You can grab it from &lt;a href=&quot;https://bagenzo.itch.io/strawberry-starter&quot;&gt;itch.io&lt;/a&gt; or &lt;a href=&quot;https://github.com/kate-bagenzo/strawberry-starter&quot;&gt;Github&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Unzip it wherever - you can move the folder around later without issues, so don&#39;t worry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Download &amp;amp; Install Node&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;Node is a javascript runtime that lets you create things for the web.&lt;/li&gt;
+&lt;li&gt;Grab it from the &lt;a href=&quot;https://nodejs.org/en&quot;&gt;Node website&lt;/a&gt;.
+&lt;ul&gt;
+&lt;li&gt;Note: If you&#39;ve &lt;em&gt;already&lt;/em&gt; installed Node, be sure to update to the newest version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open a Command Line in Strawberry Starter&#39;s folder&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Never used one? It&#39;s a program that lets you type computer commands.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;🪟 Windows&lt;/strong&gt;: Powershell is built-in, and what I recommend you use. If you&#39;re familiar with the &amp;quot;Command Prompt&amp;quot;, that&#39;ll &lt;em&gt;probably&lt;/em&gt; work, but it&#39;s not recommended for a variety of reasons.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🍎 macOS&lt;/strong&gt;: The program is just called Terminal. Simple!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🐧 Linux&lt;/strong&gt;: You definitely have it, but it&#39;s called something different depending on what kind of Linux you&#39;re running. Search for &amp;quot;Terminal&amp;quot; or &amp;quot;Shell&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You can probably open your chosen command line in the folder by right clicking the open folder and selecting &amp;quot;Open a Terminal&amp;quot;, but if not, open one of these programs and type &lt;code&gt;cd path/to/template/&lt;/code&gt;, where &lt;code&gt;path/to/template&lt;/code&gt; is the full path you unzipped Strawberry Starter to.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute the command: &lt;code&gt;npm install&lt;/code&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;You&#39;ll see some output, and probably some warnings and notifications. Unless you see a big ERROR, you should be okay.&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🪟 On Windows&lt;/strong&gt;: You might get a Powershell error here! If it says you don&#39;t have permission to run scripts, then copy and paste this command:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can right click -&amp;gt; paste this, or paste it with CTRL+SHIFT+V. Beware: command lines are finnicky and won&#39;t let you copy or paste with the usual shortcuts!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Then, try &lt;code&gt;npm install&lt;/code&gt; again.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If that doesn&#39;t work, try again, but running Powershell as admin.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You only need to run &lt;code&gt;npm install&lt;/code&gt; once to setup. Now you&#39;re ready to start blogging!&lt;/p&gt;
+&lt;h2&gt;Starting the development server&lt;/h2&gt;
+&lt;p&gt;There&#39;s a live server you can run to preview your changes as you make them. It&#39;s super convenient!&lt;br&gt;
+Start the server with the command &lt;code&gt;npm run dev&lt;/code&gt;. Now, open &lt;a href=&quot;localhost:1234/&quot;&gt;&lt;code&gt;localhost:1234&lt;/code&gt;&lt;/a&gt; in your browser.&lt;br&gt;
+This is a preview of what your blog looks like, and it&#39;ll update automatically as you save files.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🪟 On Windows&lt;/strong&gt;: You might see a firewall permission prompt. Allow the script to bypass the firewall, or it won&#39;t work.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Renaming &amp;amp; customizing your blog&lt;/h2&gt;
+&lt;p&gt;Go to the &lt;code&gt;src&lt;/code&gt; folder. This is where your blog&#39;s files live.&lt;br&gt;
+There&#39;s a lot of stuff here, but you don&#39;t need to worry about most it! For now, let&#39;s go to &lt;code&gt;_data&lt;/code&gt; and open the file named &lt;code&gt;config.jsonc&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;A brief aside about JSON&lt;/h3&gt;
+&lt;p&gt;If you&#39;ve never seen a &lt;code&gt;.json&lt;/code&gt; or &lt;code&gt;.jsonc&lt;/code&gt; file before - don&#39;t worry, it&#39;s not complicated! It&#39;s just a way to store text so that it can be easily read by programs. The format of JSON is pretty simple: a bunch of &lt;code&gt;keys&lt;/code&gt; and &lt;code&gt;values&lt;/code&gt;, paired like so: &lt;code&gt;&amp;quot;key&amp;quot;: &amp;quot;value&amp;quot;,&lt;/code&gt;. These keys and values are contained within two {curly braces}, which you&#39;ll see at the start and end of the file.&lt;/p&gt;
+&lt;p&gt;Note the quotation marks and the comma! &lt;strong&gt;All of the key-value pairs (except for the last) must have a comma&lt;/strong&gt;. The keys and values must also be enclosed with quotation marks. Be sure not to accidentally change that while editing your config file, or your blog will stop working!&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;config.jsonc&lt;/code&gt; contains data that appears in a few places in your blog. Take the time now to replace the defaults, being careful not to disturb any quotation marks or commas or curly braces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;siteName&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;The name of your blog. Appears on the footer, the RSS feed, and the link preview (i.e. the little image when you link to a site on social media).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteDescription&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A small description of your blog. Appears on the RSS feed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteURL&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;The public URL of your blog, e.g. (example.neocities.org) &lt;em&gt;Required&lt;/em&gt; for the link preview and RSS feed to function correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteAuthor&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Your name. Appears on the footer and RSS feed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteLang&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A two-letter code indicating what language your blog is in. Used internally for various things.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;authorLink&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;A link to your personal website or social media. Appears on the footer. You can leave this blank if you prefer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;authorContact&lt;/code&gt;
+-Your email. Appears on the footer. You can leave this blank if you prefer.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteStyle&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;The theme used by your blog. Themes are located in &lt;code&gt;src/assets/styles/themes/&lt;/code&gt;. You can use (or edit) one of the premade themes, or create your own if you know CSS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;siteSubDir&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set this only if you want to upload your blog to a subdirectory.&lt;/li&gt;
+&lt;li&gt;e.g. - set this to &lt;code&gt;/blog/&lt;/code&gt; if your site will be at &lt;code&gt;example.org/blog/&lt;/code&gt; instead of &lt;code&gt;example.org&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;This setting will automatically change all the links on your blog to work with your new subdirectory.
+&lt;ul&gt;
+&lt;li&gt;e.g. When linking images in posts, you can just do &lt;code&gt;/assets/images/example.jpg&lt;/code&gt;, instead of &lt;code&gt;/blog/assets/images/bowl_of_berries.jpg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;⚠️ Warning&lt;/strong&gt;: If you&#39;re uploading to Neocities and already have a homepage with content in it, BE SURE TO SET THIS!
+&lt;ul&gt;
+&lt;li&gt;Uploading to Neocities will OVERWRITE content like your &lt;code&gt;index.html&lt;/code&gt; !&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;An aside about text editors&lt;/h3&gt;
+&lt;p&gt;You can use whatever text editor you want to edit! I like VS Code or Notepad++, but you can even use Notepad if you want. The only important thing is that it shouldn&#39;t be a &lt;em&gt;word processor&lt;/em&gt;, like Microsoft Word or Libreoffice Writer.&lt;/p&gt;
+&lt;h2&gt;Making posts&lt;/h2&gt;
+&lt;p&gt;Time to write your first post! Go to &lt;code&gt;src/posts&lt;/code&gt; and create a new &lt;code&gt;.md&lt;/code&gt; file. You can name it whatever you want, but keep in mind that the filename will become the URL to your post (e.g. post you&#39;re reading now is named &amp;quot;installation.md&amp;quot;, so if it was uploaded to &lt;code&gt;example.neocities.org&lt;/code&gt;, its URL would be &amp;quot;&lt;code&gt;example.neocities.org/posts/installation&lt;/code&gt;&amp;quot;).&lt;br&gt;
+Blog posts start with a little thing called &lt;em&gt;front matter&lt;/em&gt;. It looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: The title of the blog post goes here
+date: 2025-12-25
+tags:
+- intro
+- example
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The title appears as a header on the post page, and also on internal links (on the frontpage&#39;s &amp;quot;Latest posts&amp;quot; section and the &amp;quot;All posts&amp;quot; page).&lt;br&gt;
+The date is actually optional - if it&#39;s not present, the file creation date will be used. This can cause some issues if you backup your posts somewhere and then reupload them - the file creation date might change! I highly recommend you always manually set the date.&lt;br&gt;
+Tags are also optional: you can add them to a post to allow users to navigate by tag. If you have at least one custom tag, a tag view will appear in &amp;quot;All Posts&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Create a new post now - give it a title and today&#39;s date. When you save the file, you should see it appear on the dev server.&lt;/p&gt;
+&lt;h2&gt;The index and navbar&lt;/h2&gt;
+&lt;p&gt;There are some other pages on your site besides blog posts, though! You&#39;ll notice there&#39;s a navigation bar at the top of your blog with three links: &lt;code&gt;home&lt;/code&gt;, &lt;code&gt;all_posts&lt;/code&gt;, and &lt;code&gt;about&lt;/code&gt;. These pages are all Markdown files, so editing them is similar to editing blog posts - they&#39;re just located in different places:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The home page (index) is located at &lt;code&gt;src/index.md&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;all_posts.md&lt;/code&gt; and &lt;code&gt;about.md&lt;/code&gt; are found at &lt;code&gt;src/info&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;Any .md file written in the &lt;code&gt;info&lt;/code&gt; folder will also appear in the navbar!
+&lt;ul&gt;
+&lt;li&gt;It won&#39;t count as a &amp;quot;blog post&amp;quot; though, so it won&#39;t appear in &amp;quot;Latest posts&amp;quot;, or update the RSS Feed.&lt;/li&gt;
+&lt;li&gt;If you want, you can instead add a blog post to the navbar by adding &lt;code&gt;tags: navbar&lt;/code&gt; to its front matter.
+&lt;ul&gt;
+&lt;li&gt;In fact, if you&#39;ve noticed, this very installation guide has such a tag!
+If the difference between .md files in &lt;code&gt;posts&lt;/code&gt; and &lt;code&gt;info&lt;/code&gt; is confusing to you, don&#39;t worry. The main difference is that only &lt;code&gt;posts&lt;/code&gt; will appear in &amp;quot;Latest posts&amp;quot; or &amp;quot;All posts&amp;quot;, while &lt;code&gt;info&lt;/code&gt;s will only appear in the navbar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You&#39;ll also notice an &lt;code&gt;#updates&lt;/code&gt; link in the navbar, which leads to a tag view of a bunch of update posts. This is a minifeed - a way to make little posts that won&#39;t clog up your &amp;quot;All Posts&amp;quot; or RSS Feed. Kind of like a mix between social media sites &amp;amp; blogging! If you want, you can learn more about this at the &lt;a href=&quot;https://yawlle.neocities.org/blog/posts/example_posts/advanced-features/&quot;&gt;Advanced Features Guide&lt;/a&gt;, but if it doesn&#39;t sound interesting to you, you can just delete everything in &lt;code&gt;_includes/navbar.html&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Favicon and Preview&lt;/h2&gt;
+&lt;p&gt;There are two last things you want to customize:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The favicon, which appears in the browser tab and bookmarks.
+&lt;ul&gt;
+&lt;li&gt;Found at &lt;code&gt;src/favicon.ico&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The link preview, which appears when you link to your blog on some sites, like social media.
+&lt;ul&gt;
+&lt;li&gt;Found at &lt;code&gt;src/social.png&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of these are images you can edit in any graphics editor. Don&#39;t change their filenames or formats!&lt;/p&gt;
+&lt;h2&gt;Building and uploading your blog&lt;/h2&gt;
+&lt;p&gt;To get your blog ready for uploading somewhere, go to the command line and type &lt;code&gt;npm run build&lt;/code&gt;. (If the dev server is still running, you can stop it with CTRL+C first.) A folder called &lt;code&gt;_site&lt;/code&gt; will appear. That folder is your completed blog, and is ready to be uploaded to whatever hosting provider you choose!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://neocities.org/&quot;&gt;Neocities&lt;/a&gt; is a cool hosting provider with a free tier! If you&#39;re going to use Neocities, Strawberry Starter can instead automatically upload your site there by using the command &lt;code&gt;npm run upload&lt;/code&gt;! However, it requires a bit of setup, so follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://neocities.org/settings#sites&quot;&gt;Go to your Neocities account settings&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Click &amp;quot;manage site settings&amp;quot;, then &amp;quot;API&amp;quot;.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Copy your API key&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;If you haven&#39;t generated an API key, do so now by pressing the button.&lt;/li&gt;
+&lt;li&gt;Keep this safe! Don&#39;t share it with anyone, or they can edit your site.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open the &lt;code&gt;.env&lt;/code&gt; file in the base of your blog and follow its instructions.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&#39;t edit &lt;code&gt;.env&lt;/code&gt; itself! It&#39;s just a template of what your &lt;code&gt;.env.local&lt;/code&gt; should look like, and should be kept that way to ensure your API key stays safe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(Optional) Set a subdirectory&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have an empty site and want your blog to live at &lt;code&gt;example.neocities.org&lt;/code&gt;, then you don&#39;t need to do anything else.&lt;/li&gt;
+&lt;li&gt;HOWEVER, if you already have a homepage at the base of your Neocities, you can instead upload to a subdirectory like &lt;code&gt;example.neocities.org/blog/&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;To do this, change the &lt;code&gt;siteSubDir&lt;/code&gt; in &lt;code&gt;config.jsonc&lt;/code&gt; to something else, e.g. &lt;code&gt;/blog/&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;⚠️ Warning&lt;/strong&gt;: BE SURE to set this if you already have a homepage! Uploading to Neocities will OVERWRITE content, so if you already have, for example, an &lt;code&gt;index.html&lt;/code&gt; page, &lt;code&gt;npm run upload&lt;/code&gt; will replace it with Strawberry Starter&#39;s index. Setting a subdirectory avoids this, but just in case, you might want to make a backup of your site before running &lt;code&gt;npm run upload&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;You can easily back up your Neocities site by navigating to the &lt;a href=&quot;https://neocities.org/dashboard&quot;&gt;dashboard&lt;/a&gt; and clicking &amp;quot;Download entire site&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you followed the above steps correctly, you should be able to use &lt;code&gt;npm run upload&lt;/code&gt;! That command also builds your site, so if you&#39;re uploading to neocities this way, you don&#39;t need to run &lt;code&gt;npm run build&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;All done!&lt;/h2&gt;
+&lt;p&gt;You should now have everything you need for a successful blog!&lt;br&gt;
+Go forth and write an introduction post, edit the index and about pages, and upload your site!&lt;br&gt;
+Oh - and don&#39;t forget to delete the &lt;code&gt;example_posts&lt;/code&gt; folder in &lt;code&gt;posts&lt;/code&gt;!&lt;/p&gt;
+</content>
+  </entry>
+</feed>
