@@ -24,6 +24,10 @@ h3 {
   color: #16537e;
 }
 
+h2 {
+  text-align: center;
+}
+
 body {
   height: 100vh;
   overflow: hidden;
@@ -262,4 +266,10 @@ body {
 
 .sidebar-buttons p {
   font-size: 12px;
+}
+
+.tag-btn {
+  padding: 5px;
+  margin-right: 5px;
+  font-family: "Aldrich";
 }
