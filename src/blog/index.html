@@ -1,0 +1,80 @@
+---
+layout: layout.html
+title: blog
+---
+
+<h2 style="text-align: center">BLOG</h2>
+<img src="/graphics/gr_divider_2.gif" />
+
+<p>
+  hi everyone, this is my personal blog. <br /><br />
+  i hope to write about my interests, which are basically art, programming,
+  music and random thoughts that i feel like sharing. i love typing, especially
+  now that i have my new keyboard, an aula f75 with cream ice vein keycaps, so i
+  am more than excited to write a lot!
+  <br /><br />
+  check the tags below:
+</p>
+<div id="tag-filters"></div>
+<br />
+<h3>old posts [dd/mm/yyyy]</h3>
+<ol id="post-list"></ol>
+
+<script>
+  async function loadPosts() {
+    const res = await fetch("/blog/posts.json", { cache: "no-cache" });
+    const posts = await res.json();
+
+    posts.sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO));
+
+    const allTags = [...new Set(posts.flatMap((p) => p.tags))].sort();
+    let activeTag = null;
+
+    const tagContainer = document.getElementById("tag-filters");
+    const postList = document.getElementById("post-list");
+
+    function renderTags() {
+      tagContainer.innerHTML = "";
+      const allBtn = document.createElement("button");
+      allBtn.textContent = "all";
+      allBtn.className = "tag-btn" + (activeTag === null ? " active" : "");
+      allBtn.onclick = () => {
+        activeTag = null;
+        render();
+      };
+      tagContainer.appendChild(allBtn);
+
+      allTags.forEach((tag) => {
+        const btn = document.createElement("button");
+        btn.textContent = tag;
+        btn.className = "tag-btn" + (activeTag === tag ? " active" : "");
+        btn.onclick = () => {
+          activeTag = tag;
+          render();
+        };
+        tagContainer.appendChild(btn);
+      });
+    }
+
+    function render() {
+      renderTags();
+      const filtered = activeTag
+        ? posts.filter((p) => p.tags.includes(activeTag))
+        : posts;
+
+      postList.innerHTML = "";
+      filtered.forEach((post) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <a href="${post.url}">${post.date} — ${post.title}</a>
+          <span class="post-tags">${post.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</span>
+        `;
+        postList.appendChild(li);
+      });
+    }
+
+    render();
+  }
+
+  loadPosts();
+</script>

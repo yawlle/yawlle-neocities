@@ -10,18 +10,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
       - name: Upload to Neocities
         run: |
-          find . -type f \
-            ! -path './.git/*' \
-            ! -path './.github/*' \
-            ! -path './node_modules/*' \
-            ! -name 'package.json' \
-            ! -name 'package-lock.json' \
-            ! -name 'deploy.js' \
+          find ./_site -type f \
           | while read file; do
-            curl -n \
-              -F "${file#./}=@${file}" \
+            curl -s \
+              -F "${file#./_site/}=@${file}" \
               "https://neocities.org/api/upload" \
               -H "Authorization: Bearer ${{ secrets.NEOCITIES_API_TOKEN }}"
           done
