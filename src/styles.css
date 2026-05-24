@@ -24,6 +24,10 @@ h3 {
   color: #16537e;
 }
 
+b {
+  color: #16537e;
+}
+
 h2 {
   text-align: center;
 }
@@ -272,4 +276,15 @@ body {
   padding: 5px;
   margin-right: 5px;
   font-family: "Aldrich";
+}
+
+.img-to-blog-center {
+  height: 200px;
+  width: auto;
+  align-self: center;
+}
+
+.img-to-blog {
+  height: 200px;
+  width: auto;
 }
