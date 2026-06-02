@@ -10,5 +10,11 @@
     "date": "24/05/2026",
     "url": "/blog/posts/two-years-of-clancy/",
     "tags": ["music"]
+  },
+  {
+    "title": "some quotes from books",
+    "date": "02/06/2026",
+    "url": "/blog/posts/some-quotes/",
+    "tags": ["books"]
   }
 ]
