@@ -288,3 +288,98 @@ body {
   height: 200px;
   width: auto;
 }
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 2vh auto;
+    padding: 0 12px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .float-gif {
+    height: 110px;
+  }
+
+  .banner {
+    height: auto;
+  }
+
+  .marquee-track img {
+    height: 24px;
+  }
+
+  .banner-text,
+  .sidebar-text,
+  .sidebar-buttons {
+    font-size: 15px;
+  }
+
+  .sidebar-title {
+    font-size: 16px;
+  }
+
+  .sidebar-row img {
+    height: 40px;
+  }
+
+  .sidebar-row span {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* fine-tuning for narrower phones (Samsung Galaxy S23: ~360px wide) */
+@media (max-width: 400px) {
+  .main-container {
+    padding: 0 8px;
+    gap: 8px;
+  }
+
+  .float-gif {
+    height: 90px;
+  }
+
+  .banner-text,
+  .sidebar-text,
+  .sidebar-buttons {
+    font-size: 13px;
+  }
+
+  .sidebar-title {
+    font-size: 14px;
+  }
+
+  .sidebar-row img {
+    height: 32px;
+  }
+
+  .sidebar-row span {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .link-button {
+    font-size: 10px;
+  }
+}
