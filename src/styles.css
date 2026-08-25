@@ -220,6 +220,12 @@ body {
 .banner {
   height: 186px;
   width: 100%;
+  display: block;
+}
+
+.header a {
+  display: block;
+  line-height: 0;
 }
 
 .construction-date {
