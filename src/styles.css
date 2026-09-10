@@ -211,6 +211,37 @@ body {
   display: block;
 }
 
+/* menu: altura travada em 4 itens, o resto rola */
+.sidebar-menu .panel-inner {
+  --menu-row-h: 50px;
+  --menu-head-h: 66px;
+  height: calc(var(--menu-row-h) * 4 + var(--menu-head-h));
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: auto;
+  scrollbar-color: #16537e #cdd2de;
+}
+
+.sidebar-menu .panel-inner::-webkit-scrollbar {
+  width: 14px;
+}
+
+.sidebar-menu .panel-inner::-webkit-scrollbar-track {
+  background: #cdd2de;
+  border-left: 1px solid #a9adba;
+  box-shadow: inset 1px 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-menu .panel-inner::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4a8fc0 0%, #16537e 100%);
+  border: 1px solid #0f3f61;
+  border-radius: 7px;
+}
+
+.sidebar-menu .panel-inner::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5ea3d4 0%, #1b6699 100%);
+}
+
 .banner-text {
   color: black;
   font-size: 18px;
@@ -401,6 +432,11 @@ body {
     font-size: 16px;
   }
 
+  .sidebar-menu .panel-inner {
+    --menu-row-h: 40px;
+    --menu-head-h: 56px;
+  }
+
   .sidebar-row img {
     height: 40px;
   }
@@ -432,6 +468,11 @@ body {
 
   .sidebar-title {
     font-size: 14px;
+  }
+
+  .sidebar-menu .panel-inner {
+    --menu-row-h: 32px;
+    --menu-head-h: 54px;
   }
 
   .sidebar-row img {
