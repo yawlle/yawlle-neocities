@@ -48,5 +48,16 @@
           '<p class="comments-offline">comments are unavailable right now :( try again later!</p>';
       }
     }, 10000);
+
+    // o neocities bloqueia o envio de comentários (CSP), então em produção
+    // esconde o formulário e mostra só os comentários existentes
+    if (location.hostname.indexOf("neocities.org") !== -1) {
+      var section = document.currentScript.parentNode;
+      section.classList.add("comments-readonly");
+      var notice = document.createElement("p");
+      notice.className = "comments-offline";
+      notice.textContent = "comments are closed for now, sorry!";
+      section.appendChild(notice);
+    }
   </script>
 </div>

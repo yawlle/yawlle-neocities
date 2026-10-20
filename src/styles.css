@@ -532,6 +532,10 @@ body {
   width: 100%;
 }
 
+.comments-readonly #HCB_comment_box form {
+  display: none;
+}
+
 .comments-offline {
   text-align: center;
   color: #16537e;
