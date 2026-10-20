@@ -39,43 +39,11 @@ html {
 body {
   min-height: 100vh;
   overflow-x: clip;
-  --chk1: #96ddf5;
-  --chk2: #b0c4de;
-  --chk-size: 100px;
-  background-color: var(--chk2);
+  background-color: #b0c4de;
   background-image:
-    linear-gradient(
-      45deg,
-      var(--chk1) 25%,
-      transparent 25%,
-      transparent 75%,
-      var(--chk1) 75%,
-      var(--chk1) 100%
-    ),
-    linear-gradient(
-      45deg,
-      var(--chk1) 25%,
-      transparent 25%,
-      transparent 75%,
-      var(--chk1) 75%,
-      var(--chk1) 100%
-    );
-  background-size: var(--chk-size) var(--chk-size);
-  animation: diagScroll 6s linear infinite;
-}
-
-@keyframes diagScroll {
-  from {
-    background-position:
-      0 0,
-      calc(var(--chk-size) / 2) calc(var(--chk-size) / 2);
-  }
-  to {
-    background-position:
-      var(--chk-size) var(--chk-size),
-      calc(var(--chk-size) / 2 + var(--chk-size))
-        calc(var(--chk-size) / 2 + var(--chk-size));
-  }
+    linear-gradient(rgba(225, 228, 235, 0.726), rgba(225, 228, 235, 0.822)),
+    url("/images/bg_v1.jpg");
+  background-repeat: repeat;
 }
 
 .float-gif {
@@ -268,9 +236,10 @@ body {
 
 .construction-date {
   font-size: 14px;
-  color: #555;
-  margin-top: 8px;
+  padding: 0px 10px;
+  color: white;
   align-self: center;
+  background-color: blue;
   font-family: "aldrich";
 }
 
