@@ -19,13 +19,32 @@
         color: black;
       }
 
-      /* títulos iguais aos h2/h3 do site (src/styles.css). o !important
-         ganha do tema do htmlcommentbox, que carrega depois deste css */
       #HCB_comment_box h3 {
         font-family: "Silkscreen", sans-serif !important;
         font-weight: 400 !important;
         color: #16537e !important;
         text-align: center;
+      }
+
+      /* botão de enviar com o mesmo degradê azul da barra de rolagem do menu */
+      #HCB_comment_box input[type="submit"],
+      #HCB_comment_box button,
+      #HCB_comment_box .btn {
+        font-family: "Silkscreen", sans-serif !important;
+        font-weight: 400 !important;
+        color: white !important;
+        text-shadow: none !important;
+        background: linear-gradient(180deg, #4a8fc0 0%, #16537e 100%) !important;
+        border: 1px solid #0f3f61 !important;
+        border-radius: 7px !important;
+        box-shadow: none !important;
+        cursor: pointer;
+      }
+
+      #HCB_comment_box input[type="submit"]:hover,
+      #HCB_comment_box button:hover,
+      #HCB_comment_box .btn:hover {
+        background: linear-gradient(180deg, #5ea3d4 0%, #1b6699 100%) !important;
       }
 
       .comments-offline {
