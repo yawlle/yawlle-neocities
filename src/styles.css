@@ -522,3 +522,22 @@ body {
   text-decoration: line-through;
   opacity: 0.55;
 }
+
+.post-comments {
+  margin-top: 30px;
+}
+
+.post-comments > img {
+  display: block;
+  width: 100%;
+}
+
+.comments-offline {
+  text-align: center;
+  color: #16537e;
+}
+
+.post-comments h3 {
+  text-align: center;
+  margin: 10px 0;
+}

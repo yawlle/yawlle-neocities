@@ -75,7 +75,12 @@ Well well, internet is still nice, i suppose...
             <img src="/images/ic_fechar.png" alt="" />
           </button>
           <div class="panel-inner">
-            <div class="banner-text">{{ content }}</div>
+            <div class="banner-text">
+              {{ content }}
+              {% if page.url contains "/blog/posts/" %}
+                {% include "comments.html" %}
+              {% endif %}
+            </div>
           </div>
         </div>
         <p class="construction-date">construction began: May 20th, 2026</p>
