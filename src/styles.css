@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url("/graphics/cur_pompom.cur"), auto;
+  cursor: url("/graphics/cur_pompom.png") 0 0, auto;
 }
 
 @font-face {
