@@ -1,20 +1,9 @@
 <div class="post-comments">
   <img src="/graphics/gr_divider_7.gif" />
-  <!-- os comentários ficam no GitHub Pages (pasta docs/), porque o neocities
-       bloqueia o envio de formulários pra outros sites -->
-  <iframe
-    class="comments-frame"
-    src="https://yawlle.github.io/yawlle-neocities/?post={{ page.fileSlug }}"
-    title="comments"
-    loading="lazy"
-  ></iframe>
-  <script>
-    // a página de comentários manda a própria altura, e o iframe acompanha
-    window.addEventListener("message", function (e) {
-      if (e.origin !== "https://yawlle.github.io") return;
-      if (!e.data || e.data.type !== "comments-height") return;
-      var frame = document.querySelector(".comments-frame");
-      frame.style.height = e.data.height + "px";
-    });
-  </script>
+  <div id="direx-comments"></div>
+  <script
+    src="https://direx-comment-box.direx-comments.workers.dev/embed.js"
+    data-site="yawlle"
+    async
+  ></script>
 </div>
