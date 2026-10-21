@@ -18,14 +18,17 @@ title: blog
 <div id="tag-filters"></div>
 <br />
 <h3>old posts [dd/mm/yyyy]</h3>
-<ol id="post-list"></ol>
+<ul id="post-list" style="list-style: none; padding-left: 0"></ul>
 
 <script>
   async function loadPosts() {
     const res = await fetch("/blog/posts.json", { cache: "no-cache" });
     const posts = await res.json();
 
-    posts.sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO));
+    // date vem como dd/mm/yyyy; vira yyyymmdd pra dar pra comparar
+    const dateKey = (p) => p.date.split("/").reverse().join("");
+    // reverse antes pra que posts do mesmo dia fiquem com o último adicionado primeiro
+    posts.reverse().sort((a, b) => dateKey(b).localeCompare(dateKey(a)));
 
     const allTags = [...new Set(posts.flatMap((p) => p.tags))].sort();
     let activeTag = null;
